@@ -30,4 +30,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // isAdmin
 Route::resource('siswa', SiswaController::class)->middleware('can:isAdmin');
 // isSiswa
-Route::resource('siswa', SiswaController::class)-> only('show')->middleware('can:isAdminSiswa');
+Route::resource('siswa', SiswaController::class)->only('show')->middleware('can:isAdminSiswa');
